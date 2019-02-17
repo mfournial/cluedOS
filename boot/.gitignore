@@ -1,0 +1,7 @@
+# Results
+isofiles/boot/kernel.bin
+os.iso
+
+# Object files
+boot.o
+multiboot.o
