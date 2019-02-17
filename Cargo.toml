@@ -4,11 +4,8 @@ version = "0.1.0"
 authors = ["Mayeul Fournial <mfournial@outlook.com>"]
 edition = "2018"
 
-# Disables stack unwinding
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
+[package.metadata.bootimage]
+default-target = "x86_64.json"
 
 [dependencies]
+bootloader = "0.3.12"
