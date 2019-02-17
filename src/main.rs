@@ -5,8 +5,6 @@ use core::panic::PanicInfo;
 
 mod vga;
 
-// static HELLO: &[u8] = b"Hello World!";
-
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
@@ -14,6 +12,8 @@ fn panic(_info: &PanicInfo) -> ! {
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    vga::print_something();
+    use core::fmt::Write;
+    vga::WRITER.lock().write_str("Hello again").unwrap();
+    write!(vga::WRITER.lock(), ", some numbers: {} {}", 42, 1.337).unwrap();
     loop {}
 }
