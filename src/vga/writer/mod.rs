@@ -5,9 +5,9 @@ use spin::Mutex;
 pub mod macros;
 use super::colours::Color;
 use super::colours::ColorCode;
+use super::Buffer;
 use super::BUFFER_HEIGHT;
 use super::BUFFER_WIDTH;
-use super::Buffer;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(C)]

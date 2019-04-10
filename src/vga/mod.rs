@@ -4,8 +4,8 @@ mod colours;
 mod writer;
 
 // Exposes print macros
-pub use writer::macros;
 pub use writer::_print;
+pub use writer::macros;
 
 // VGA output size
 const BUFFER_HEIGHT: usize = 25;
